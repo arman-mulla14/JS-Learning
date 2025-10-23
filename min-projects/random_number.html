@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main">
+      <button onclick="roll()">Roll</button>
+
+      <div id="hero">
+        <label for="" id="result" id="dam"></label>
+        <label for="" id="result1" id="dam"></label>
+        <label for="" id="result2" id="dam"></label> <br />
+
+<h4>Total Sum of</h4>
+        <label for="" id="sum"></label>
+      </div>
+    </div>
+
+    <style>
+      #main {
+        text-align: center;
+        margin-top: 12%;
+      }
+
+      #hero {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 20px;
+        color: black;
+      }
+      button {
+        background-color: rgb(150, 255, 150);
+        width: 120px;
+        height: 30px;
+        border-radius: 10px;
+        border: none;
+      }
+      button:hover {
+        background-color: rgb(169, 169, 239);
+      }
+    </style>
+
+    <script>
+      function roll() {
+        let result = document.getElementById("result");
+        let result1 = document.getElementById("result1");
+        let result2 = document.getElementById("result2");
+
+        let random;
+        let random1;
+        let random2;
+        let sum = document.getElementById("sum");
+
+        random = Math.floor(Math.random() * 100) + 1;
+
+        random1 = Math.floor(Math.random() * 100) + 1;
+
+        random2 = Math.floor(Math.random() * 100) + 1;
+        result.textContent = random;
+        result1.textContent = random1;
+        result2.textContent = random2;
+        sum.textContent = random + random1 + random2;
+      }
+    </script>
+  </body>
+</html>

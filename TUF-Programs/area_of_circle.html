@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-----<Script src="./constants.js"></Script>---->
+  </head>
+  <body>
+    <div id="main">
+      <div id=" hero">
+        <input type="number" placeholder="Enter Radius " id="data" min="1" />
+        <button onclick="roll()">Calculate</button>
+        <div id="result"></div>
+      </div>
+    </div>
+
+    <style>
+      #main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+      #hero {
+        text-align: center;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      input {
+        padding: 10px;
+        margin-right: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      button {
+        padding: 10px 15px;
+        border: none;
+        background-color: #28a745;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #218838;
+      }
+
+      #result {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #333;
+      }
+    </style>
+
+    <script>
+      function roll() {
+        let pi = 3.14;
+        let Radius = document.getElementById("data").value;
+        let circomefarance;
+
+        circomefarance = 2 * pi * Radius;
+
+        document.getElementById("result").textContent =
+          "The Circomefarance of Circle is : " + circomefarance.toFixed(2);
+      }
+    </script>
+  </body>
+</html>

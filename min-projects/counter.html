@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="main">
+        <div id="hero">
+
+            <label for="" id="data">0</label><br>
+
+            <button id="Increment">Increment</button>
+            <button id="Reset">Reset</button>
+            <button id="Decrement">Decrement</button>
+            
+
+        </div>
+
+    </div>
+
+    <style>
+        #main{
+            text-align: center;
+            margin-top: 10%;
+        
+        }
+        #data{
+            display: block;
+            font-size: 10em;
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(230, 193, 113);
+        }
+button{
+    width: 120px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background: rgb(127, 249, 127);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover{
+    transition: 0.3s;
+    background: #eca2a2;
+    color: aqua;
+}
+    </style>
+    
+
+    <Script>
+        const Increment = document.getElementById("Increment");
+        const Decrement = document.getElementById("Decrement"); 
+        const Reset = document.getElementById("Reset");
+        const data = document.getElementById("data");
+        let count = 0 ; 
+
+        Increment.onclick = function(){
+            count ++;
+            data.textContent = count;
+        }
+
+        Decrement.onclick = function(){
+            count -- ;
+            data.textContent = count ;
+
+        }
+
+        Reset.onclick = function(){
+            count = 0;
+            data.textContent = count ;
+
+        }
+
+    </Script>
+</body>
+</html>
