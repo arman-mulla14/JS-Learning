@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main">
+      <div id="hero">
+        <div id="data">
+          <input type="Number " placeholder="Enter Number " id="data1" />
+          <input type="Number " placeholder="Enter Number " id="data2" />
+
+          <button onclick="roll()" id="Add">(+)</button>
+          <button onclick="roll() " id="Sub">(-)</button>
+          <button onclick="roll()" id="Mul">(x)</button>
+          <button onclick="roll()" id="Div">(%)</button>
+        </div>
+        <div id="result"></div>
+      </div>
+    </div>
+
+    <script>
+      function roll() {
+        let add = document.getElementById("Add");
+        let sub = document.getElementById("Sub");
+        let mul = document.getElementById("Mul");
+        let div = document.getElementById("Div");
+        let result = document.getElementById("result");
+        let data1 = document.getElementById("data1");
+        let data2 = document.getElementById("data2");
+
+        if (add.onclick) {
+          let sum = Number(data1.value) + Number(data2.value);
+          result.innerHTML = "The Sum is: " + sum;
+        }else if (sub.onclick) {
+          let difference = Number(data1.value) - Number(data2.value);
+          result.innerHTML = "The Difference is: " + difference;
+        } else if (mul.onclick) {
+          let product = Number(data1.value) * Number(data2.value);
+          result.innerHTML = "The Product is: " + product;
+        } else if (div.onclick) {
+          let quotient = Number(data1.value) / Number(data2.value);
+          result.innerHTML = "The Quotient is: " + quotient;
+        } else {
+          console.log("Invalid Operation");
+        }
+      }
+    </script>
+    <style>
+      #main {
+        text-align: center;
+        margin-top: 25vh;
+      }
+
+      input {
+        padding: 10px;
+        font-size: 20px;
+        width: 120px;
+        border-radius: 5px;
+        border: 2px solid black;
+        margin-bottom: 20px;
+      }
+
+      button {
+        padding: 10px 15px;
+        font-size: 20px;
+        margin: 5px;
+        border-radius: 5px;
+        border: 2px solid black;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: rgb(5, 223, 223);
+      }
+    </style>
+  </body>
+</html>
