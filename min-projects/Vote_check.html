@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="main">
+
+        <div id="hero">
+<h4>Enter Age For Check Voter Age Is valid ? </h4>
+            <input type="Number" placeholder="Enter Age" id="data">
+<button onclick="roll()"> Check </button> <br>
+<br>
+<label for="" id="result"></label>
+        </div>
+
+        
+    </div>
+
+    <style> 
+       
+
+      #main {
+        text-align: center;
+        margin-top: 12%;
+      }
+
+      #hero {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 20px;
+        color: black;
+      }
+      button {
+        background-color: rgb(150, 255, 150);
+        width: 120px;
+        height: 30px;
+        border-radius: 10px;
+        border: none;
+      }
+      button:hover {
+        background-color: rgb(169, 169, 239);
+      }
+
+      input{
+        height: 25px;
+        width: 200px;
+        border-radius: 5px;
+        text-align: center;
+      }
+ 
+
+    </style>
+
+    <script>
+        function roll(){
+            let age = document.getElementById("data").value;
+            let result = document.getElementById("result");
+
+            if(age>18){
+
+                result.textContent = `Valid For Vote Age is ${age}`;
+            }else{
+                 result.textContent = `Not Valid For Vote Age is ${age} `;
+            }
+        }
+    </script>

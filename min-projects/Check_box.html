@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <input type="checkbox" name="data" id="stud" />
+      <label for="stud">Student</label><br />
+
+      <input type="checkbox" name="data" id="one" />
+      <label for="one">MCA-1</label><br />
+
+      <input type="checkbox" name="data" id="two" />
+      <label for="two">MCA-2</label><br />
+
+      <input type="checkbox" name="data" id="finish" />
+      <label for="finish">MCA Complete</label><br />
+
+
+      <button type="submit" id="button" onclick=" roll()">Submit</button>
+
+      <p id="result"> </p>
+            <p id="result1"> </p>
+             <p id="result3"> </p>
+    </div>
+
+    <style>
+        button{
+            width: 120px;
+            background: #6af0dc;
+            height: 25px;
+            border-radius: 5px;
+            border: none;
+            margin-top: 10px;
+cursor: pointer;
+
+        }
+        button:hover{
+transition: 0.3s;
+            background: #3bf631;
+            color: red;
+        }
+    </style>
+
+    <script>
+        const stud = document.getElementById("stud");
+            const one = document.getElementById("one");
+                const two = document.getElementById("two");
+                    const finish = document.getElementById("finish");
+                    const result = document.getElementById("result");
+                      const result1 = document.getElementById("result1");
+                      const result3 = document.getElementById("result3");
+
+
+
+                      function roll(){
+
+                        if(one.checked){
+                            result.textContent = `You Are MCA -1 Year Student`;
+                        }else{
+                             result.textContent = `You Are Not MCA -1 Year Student`;
+                            
+                        }
+
+                        
+                        if(two.checked){
+                            result1.textContent = `You Are MCA -2 Year Student`;
+                        }else{
+                             result1.textContent = `You Are Not MCA -2 Year Student`;
+                            
+                        }
+
+                        
+                        if(finish.checked){
+                            result3.textContent = `You Are Past MCA Student`;
+                        }else{
+                             result3.textContent = `You Are Not past MCA  Student`;
+                            
+                        }
+
+
+                      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="nav">
+        <h3>Islampur Mart</h3>
+      </nav>
+
+      <div class="hero">
+        <div class="store">
+          <button type="" id="milk" class="item-btn">Milk</button>
+          <button type="button" id="bread" class="item-btn">Bread</button>
+          <button type="button" id="eggs" class="item-btn">Eggs</button>
+          <button type="button" id="parle" class="item-btn">Parle-G</button>
+          <button type="button" id="colgate" class="item-btn">Colgate</button>
+          <button type="button" id="soap" class="item-btn">Soap</button>
+        </div>
+      </div>
+
+      <div class="carto">
+        <h4>--------\ Cart /--------</h4>
+        <div id="cart">
+          <p id="p1"></p>
+          <p id="p2"></p>
+          <p id="p3"></p>
+          <p id="p4"></p>
+          <p id="p5"></p>
+          <p id="p6"></p>
+        </div>
+      </div>
+
+      <div class="bill">
+        <p id="total"></p>
+      </div>
+
+      <div class="btno">
+        <button onclick="roll()" class="subbtn">Submit</button>
+      </div>
+    </div>
+
+    <script>
+      function roll() {
+        const milk = document.getElementById("milk");
+        const bread = document.getElementById("bread");
+        const eggs = document.getElementById("eggs");
+        const parle = document.getElementById("parle");
+        const colgate = document.getElementById("colgate");
+        const soap = document.getElementById("soap");
+
+        const p1 = document.getElementById("p1");
+
+        const p2 = document.getElementById("p2");
+        const p3 = document.getElementById("p3");
+        const p4 = document.getElementById("p4");
+        const p5 = document.getElementById("p5");
+        const p6 = document.getElementById("p6");
+    
+        if (milk.click) {
+
+          p1.textContent = "milk";
+          
+        }
+      }
+    </script>
+
+    <!-------
+
+
+   
+
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .nav {
+        background-color: teal;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+
+      main {
+        width: 100%;
+        height: 100vh;
+      }
+
+      .hero {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 90vh;
+      }
+
+      .store {
+        margin-top: -55vh;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgb(234, 234, 76);
+        width: 100%;
+        height: 30%;
+        border-radius: 10px;
+        padding-top: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    
+    </style>
+     ---------->
+
+    <style>
+      h4 {
+        font-size: 20px;
+        display: flex;
+
+        justify-content: center;
+      }
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      .btno {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .nav {
+        background-color: teal;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+
+      main {
+        width: 100%;
+        height: 100vh;
+      }
+
+      .hero {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 25vh;
+      }
+
+      #cart {
+        /* slightly safer spacing and wrap for responsive buttons */
+        margin-top: 20px;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgb(234, 234, 76);
+        width: 100%;
+        height: auto;
+        min-height: 220px;
+        border-radius: 12px;
+        padding: 18px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .store {
+        /* slightly safer spacing and wrap for responsive buttons */
+        margin-top: 20px;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgb(234, 234, 76);
+        width: 100%;
+        height: auto;
+        min-height: 120px;
+        border-radius: 12px;
+        padding: 18px;
+        padding-top: 50px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      /* NEW: improved button styles */
+      .item-btn {
+        background: linear-gradient(180deg, #f8fff8 0%, #e6ffea 100%);
+        color: #054d18;
+        border: 1px solid #bfe6c6;
+        padding: 10px 16px;
+        margin: 0;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 15px;
+        box-shadow: 0 6px 14px rgba(6, 60, 20, 0.06);
+        transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms;
+      }
+      .bill {
+        margin-top: 20px;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgb(234, 234, 76);
+        width: 100%;
+        height: auto;
+        min-height: 120px;
+        border-radius: 12px;
+        padding: 18px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .item-btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 14px 28px rgba(6, 60, 20, 0.1);
+        filter: brightness(1.02);
+      }
+
+      .item-btn:active {
+        transform: translateY(-1px) scale(0.995);
+        box-shadow: 0 6px 14px rgba(6, 60, 20, 0.08);
+      }
+
+      .item-btn:focus {
+        outline: none;
+        box-shadow: 0 0 0 4px rgba(34, 139, 34, 0.12);
+      }
+
+      button {
+        background: #2fb58d;
+        width: 160px;
+        height: 50px;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        box-shadow: rgba(0, 0, 0, 0.9);
+        border: none;
+        border-radius: 10px;
+      }
+
+      button:hover {
+        background: #3ee2b4;
+        cursor: pointer;
+        color: white;
+      }
+
+      .subbtn {
+        background: #2fb58d;
+        width: 160px;
+        height: 40px;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        box-shadow: rgba(0, 0, 0, 0.9);
+        border: none;
+        border-radius: 10px;
+      }
+    </style>
+  </body>
+</html>
