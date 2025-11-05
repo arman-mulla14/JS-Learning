@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="hero">
+
+        <div class="main">
+
+            <div class="dem">
+                <input type="text" name="" id="data" placeholder="Enter Email Id">
+
+<button onclick="roll()">Submit</button>
+<div id="result" class="aa"></div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .hero{
+       display: flex;
+       justify-content: center;
+       
+
+           
+        }
+        .aa{
+            margin-top: 5px;
+            text-align: center;
+            font-family: initial;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .hero{
+            display: flex;
+            justify-content: center;
+            
+
+        }
+
+        .dem{
+            
+            width: 300px;
+            margin-top: 90px;
+            height: 200px;
+            background-color: rgb(234, 199, 239);
+            border-radius: 6%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        input{
+            width: 250px;
+            height: 30px;
+            margin-top: 50px;
+            margin-left: 20px;
+            border-radius: 5px;
+            border: none;
+            padding-left: 10px;
+            text-align: center;
+        }
+        button{
+            width: 100px;
+            height: 30px;
+            margin-left: 100px;
+            margin-top: 35px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(128, 0, 128);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+    button:hover{
+        background-color: rgb(151, 246, 221);
+        color: black;
+    }
+       
+    </style>
+
+
+<Script>
+    function roll(){
+        const data = document.getElementById("data").value;
+        let result = document.getElementById("result");
+        const username = data.split("@")[0];
+
+        let rand = Math.floor(Math.random() * 100);
+
+
+        if(data.includes("@")){
+            result.textContent = "Your Username is : " + username + rand + "🤩"; 
+
+        }else{
+            result.textContent = "Please enter a valid email id" + " ☹️";
+        }
+    }
+</Script>
+</body>
+</html>
